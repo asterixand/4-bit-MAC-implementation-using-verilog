@@ -1,0 +1,5 @@
+vcs ../source/johnson_test.v  ../source/johnson.v
+./simv
+
+#OR
+#vcs ../source/johnson_test.v  ../source/johnson.v -R

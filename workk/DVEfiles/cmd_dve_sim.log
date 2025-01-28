@@ -1,0 +1,145 @@
+ucliGUI::start /net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/simv -ucligui 
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD2
+set ::dve_fid VPD2
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpPMbydI
+synUtils::sendTool -active {_icl_start_rpc -version "S-2021.09-SP1-1_Full64" -sync_file /tmp/vcs_dve_rpc.hwu6hc.17233}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.hwu6hc.17233}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+# Begin_DVE_Session_Save_Info
+# DVE restart session
+# Saved on Mon Jan 27 19:11:42 2025
+# Designs open: 1
+#   Sim: /net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/simv
+# Toplevel windows open: 3
+# 	TopLevel.1
+# 	TopLevel.2
+# 	TopLevel.3
+#   Schematic.1: .
+#   Source.1: mac_tb
+#   Schematic.3: .
+#   Schematic.2: .
+#   Wave.1: 21 signals
+#   Wave.2: 14 signals
+#   Group count = 2
+#   Group u_mac signal count = 21
+#   Group mac_tb signal count = 14
+# End_DVE_Session_Save_Info
+# DVE version: S-2021.09-SP1-1_Full64
+# DVE build date: Jan 16 2022 21:13:46
+#<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
+# Application preferences
+#<WindowLayout>
+# DVE top-level session
+# Create and position top-level window: TopLevel.1
+set TopLevel.1 TopLevel.1
+# Docked window settings
+set HSPane.1 HSPane.1
+set Hier.1 Hier.1
+set DLPane.1 DLPane.1
+set Data.1 Data.1
+set Console.1 Console.1
+set DriverLoad.1 DriverLoad.1
+# MDI window settings
+set Source.1 Source.1
+set Schematic.1 [gui_create_window -type {Schematic}  -parent ${TopLevel.1} -defer_create_taskbar_icon]
+set setting [::Misc::Setting::create -array DvePathSchematicSettings]
+Misc::init_window $setting ${Schematic.1}
+::Misc::exec_method -window ${Schematic.1} -method captionCmd
+set Schematic.2 [gui_create_window -type {Schematic}  -parent ${TopLevel.1} -defer_create_taskbar_icon]
+set setting [::Misc::Setting::create -array DvePathSchematicSettings]
+Misc::init_window $setting ${Schematic.2}
+::Misc::exec_method -window ${Schematic.2} -method captionCmd
+set Schematic.3 [gui_create_window -type {Schematic}  -parent ${TopLevel.1} -defer_create_taskbar_icon]
+set setting [::Misc::Setting::create -array DvePathSchematicSettings]
+Misc::init_window $setting ${Schematic.3}
+::Misc::exec_method -window ${Schematic.3} -method captionCmd
+# End MDI window settings
+# Create and position top-level window: TopLevel.2
+set TopLevel.2 TopLevel.2
+# Docked window settings
+# MDI window settings
+set Wave.1 Wave.1
+# End MDI window settings
+# Create and position top-level window: TopLevel.3
+set TopLevel.3 TopLevel.3
+# Docked window settings
+# MDI window settings
+set Wave.2 Wave.2
+# End MDI window settings
+#</WindowLayout>
+#<Database>
+#</Database>
+# DVE Global setting session:
+# Global: Breakpoints
+# Global: Bus
+# Global: Expressions
+# Global: Signal Time Shift
+# Global: Signal Compare
+ucliGUI::vpdAddHierarchy -scope mac_tb.u_mac -depth 1 -file /net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/inter.vpd; synopsys::dump -flush VPD2
+synopsys::dump -add {mac_tb.u_mac.clk} -aggregates  -fid VPD2
+synopsys::dump -add {mac_tb.u_mac.out_valid} -aggregates  -fid VPD2
+# Global: Signal Groups
+synopsys::dump -add {mac_tb.u_mac} -scope "." -depth 1 -fid VPD2
+synopsys::dump -add {mac_tb} -scope "." -depth 1 -fid VPD2
+set _session_group_1 u_mac
+set u_mac "$_session_group_1"
+set _session_group_2 mac_tb
+set mac_tb "$_session_group_2"
+# Global: Highlighting
+# Global: Stack
+# Post database loading setting...
+# Save global setting...
+# Wave/List view global setting
+# Close all empty TopLevel windows
+foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
+# DVE View/pane content session:
+# Hier 'Hier.1'
+catch {gui_list_select -id ${Hier.1} {mac_tb}}
+# Data 'Data.1'
+catch { gui_list_select -id ${Data.1} {mac_tb.pattern_in }}
+# Source 'Source.1'
+# View 'Wave.1'
+set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+set origGroupCreationState [gui_list_create_group_when_add -wave]
+if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+if { $groupExD } {  gui_msg_report -code DVWW028 }
+# DriverLoad 'DriverLoad.1'
+# View 'Schematic.1'
+# Create path schematic window 'Schematic.1'
+# View 'Schematic.2'
+# Create path schematic window 'Schematic.2'
+# View 'Schematic.3'
+# Create path schematic window 'Schematic.3'
+# View 'Wave.2'
+set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+set origGroupCreationState [gui_list_create_group_when_add -wave]
+synopsys::dump -add {mac_tb.ans mac_tb.pattern_in } -aggregates  -fid VPD2
+if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+if { $groupExD } {  gui_msg_report -code DVWW028 }
+# Restore toplevel window zorder
+# The toplevel window could be closed if it has no view/pane
+if {[gui_exist_window -window ${TopLevel.2}]} { 	gui_set_active_window -window ${TopLevel.2} 	gui_set_active_window -window ${Wave.1} }
+if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Schematic.2} 	gui_set_active_window -window ${HSPane.1} }
+if {[gui_exist_window -window ${TopLevel.3}]} { 	gui_set_active_window -window ${TopLevel.3} 	gui_set_active_window -window ${Wave.2} }
+#</Session>
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state

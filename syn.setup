@@ -1,0 +1,122 @@
+#!/bin/bash
+
+## Author: Ben Melton (ben.melton@virginia.edu)
+## Modified: Mircea Stan (mircea@virginia.edu)
+## Modified: Stevo Bailey (sdb6t@virginia.edu)
+## Modified: Aanchal Gupta (ag4zw@virginia.edu)
+## Modified: Eric Zhang (hz9xa@virginia.edu)
+
+## Setup License
+SNPSLMD_LICENSE_FILE=27284@license2.ece.virginia.edu
+if [ -z "$LM_LICENSE_FILE" ]
+then
+   LM_LICENSE_FILE=$SNPSLMD_LICENSE_FILE
+   export LM_LICENSE_FILE
+else
+   LM_LICENSE_FILE=$SNPSLMD_LICENSE_FILE:$LM_LICENSE_FILE
+   export LM_LICENSE_FILE
+fi
+unset LANG
+unset LC_ALL
+export SNPSLMD_LICENSE_FILE
+## Thanks to Gary Li (garyli@virginia.edu)
+
+#export SYNOPSYS=/app/synopsys
+#export SYNOPSYS2=/app2/synopsys
+export SYNOPSYS_LC_ROOT=/app6/synopsys/lc/S-2021.06-SP5/bin
+export SYNOPSYSDIR=/app6/synopsys
+
+export EDITOR=/usr/bin/vim
+
+## Setup Core Synthesis Tools
+#CS_HOME=$SYNOPSYS/CoreSynthesisTools/F-2011.12
+#export PATH=$PATH:$CS_HOME/bin
+#CS_HOME2=$SYNOPSYS2/syn/I-2013.12-SP2
+#export PATH=$PATH:$CS_HOME2/bin
+export CS_HOME=$SYNOPSYSDIR/syn/S-2021.06-SP4
+export PATH=$PATH:$CS_HOME/bin
+
+## Setup PT Tools
+#PT_HOME=$SYNOPSYS/pts/F-2011.06-SP3-2
+#export PATH=$PATH:$PT_HOME/amd64/syn/bin
+PT_HOME=$SYNOPSYSDIR/prime/S-2021.06-SP5
+export PATH=$PATH:$PT_HOME/bin
+
+## Setup Custom Designer
+#CD_HOME=$SYNOPSYS/customdesigner/F-2011.09-SP1-2
+#export CDSHOME=/app/cadence/IC615
+#export PATH=$PATH:$CD_HOME/bin
+
+## Setup ASIP Designer
+AD_HOME=$SYNOPSYSDIR/asip_designer/R-2020.09
+export PATH=$PATH:$AD_HOME/bin
+
+## Setup tetramax
+TMAX_HOME=$SYNOPSYSDIR/txs/S-2021.06-SP4
+export PATH=$PATH:$TMAX_HOME/bin
+export SYNOPSYS=/app6/synopsys/txs/S-2021.06-SP4
+
+## Setup VCS
+#VCS_HOME=$SYNOPSYS/vcs-mx/F-2011.12/
+#VCS_HOME2=$SYNOPSYS2/vcs-mx/H-2013.06
+export VCS_HOME=$SYNOPSYSDIR/vcs/S-2021.09-SP1-1
+export PATH=$PATH:$VCS_HOME/bin
+
+## Setup HSpice
+#HS_HOME=$SYNOPSYS/hspice/F-2011.09-SP1
+#export PATH=$PATH:$HS_HOME/hspice/amd64
+HS_HOME=$SYNOPSYSDIR/HSPICE/S-2021.09-SP1
+export PATH=$PATH:$HS_HOME/hspice/bin
+
+## Setup Custom Explorer
+#CE_HOME=$SYNOPSYS/customexplorer/F-2011.09-SP1
+#export PATH=$PATH:$CE_HOME/bin
+
+## Setup Cosmos Scope
+#COSS_HOME=$SYNOPSYS/CosmosScope/F-2011.09
+#export PATH=$PATH:$COSS_HOME/ai_bin
+
+## Setup Formality
+#FORM_HOME=$SYNOPSYS/formality/F-2011.12
+#export PATH=$PATH:$FORM_HOME/bin
+FORM_HOME=$SYNOPSYSDIR/fm/S-2021.06-SP5
+export PATH=$PATH:$FORM_HOME/bin
+
+## Setup ICC
+#ICC_HOME=$SYNOPSYS/icc/F-2011.09-SP2-1
+#export PATH=$PATH:$ICC_HOME/bin
+ICC2_HOME=$SYNOPSYSDIR/icc2/S-2021.06-SP4
+export PATH=$PATH:$ICC2_HOME/bin
+ICV_HOME_DIR=$SYNOPSYSDIR/icvalidator/S-2021.06-SP3-3
+export PATH=$PATH:$ICV_HOME_DIR/bin
+
+
+
+## Setup hercules
+#HERCULES_HOME=$SYNOPSYS/hercules/B-2008.09-SP4
+#export PATH=$PATH:$HERCULES_HOME/bin/amd64
+
+## Setup Star-rc
+#STAR_HOME=$SYNOPSYS/starrc/F-2011.12
+#export PATH=$PATH:$STAR_HOME/bin
+
+##Setup Nanosim             Added by Eric Zhang
+#NANOSIM_HOME=$SYNOPSYS/nanosim/F-2011.09-SP1/amd64/ns
+#export PATH=$PATH:$NANOSIM_HOME/bin
+
+#LIB_HOME=/app/lib
+#export FREEPDK45_HOME=$LIB_HOME/freepdk45/trunk/osu_soc/lib/files
+
+## WARNING: This section changes the $SYNOPSYS variable to work correctly.
+##      Comment the last line if other tools are not working.
+
+## Setup Module Compiler
+#MC_HOME=$SYNOPSYS/CoreSynthesisTools/F-2011.12
+#export PATH=$PATH:$MC_HOME/amd64/mc/bin:$MC_Home/amd64/syn/bin
+#export MCDIR=$MC_HOME/mc
+#export MCENVDIR=$MCDIR/localadm:$MCDIR/adm
+#export MCLIBDIR=$SYNOPSYS/pdk/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models
+#export SYNOPSYS=$MC_HOME
+
+echo "Synopsys tools setup finished"
+

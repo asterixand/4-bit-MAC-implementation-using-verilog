@@ -1,0 +1,102 @@
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-SP1-1_Full64; Runtime version S-2021.09-SP1-1_Full64;  Jan 27 18:45 2025
+VCD+ Writer S-2021.09-SP1-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+The file '/net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/inter.vpd' was opened successfully.
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-SP1-1_Full64; Runtime version S-2021.09-SP1-1_Full64;  Jan 27 18:50 2025
+VCD+ Writer S-2021.09-SP1-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+The file '/net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/inter.vpd' was opened successfully.
+
+Warning-[STASKW_CO1] Cannot open file
+  The file 'pattern_in.txt' could not be opened. No such file or directory.
+  Please ensure that the file exists with proper permissions.
+
+
+Warning-[STASKW_RMCOF] Cannot open file
+../sourcee/mac_tb.v, 42
+  Cannot open file 'pattern_in.txt' passed as argument to $readmem.
+  Please verify that the first argument to $readmem is a file that exists with
+  proper permissions.
+
+
+Warning-[STASKW_CO1] Cannot open file
+  The file 'out_answer.txt' could not be opened. No such file or directory.
+  Please ensure that the file exists with proper permissions.
+
+
+Warning-[STASKW_RMCOF] Cannot open file
+../sourcee/mac_tb.v, 43
+  Cannot open file 'out_answer.txt' passed as argument to $readmem.
+  Please verify that the first argument to $readmem is a file that exists with
+  proper permissions.
+
+-----------   Oops! Something wrong with your code!   ------------
+$finish called from file "../sourcee/mac_tb.v", line 115.
+$finish at simulation time              2550000
+Simulation complete, time is 2550000 ps.
+ic.sdb'
+2 drivers (1 active statement) found for signal: mac_tb.u_mac.out_valid
+db'
+db'
+db'
+ic.sdb'
+Waveform compare for signal/scope:
+End compare summary.
+Waveform compare for signal/scope:
+
+Compare results Summary:
+    Number of signals compared:  1
+    Number of values compared:  198
+    Number of mismatches found:  100
+End compare summary.
+2 drivers (1 active statement) found for signal: mac_tb.u_mac.out_valid
+2 drivers (1 active statement) found for signal: mac_tb.u_mac.out_sig
+dve> 
+dve> 
+Warning: [DVDP402] 
+None of the children of the object 'mac_tb.ans[0:9][10:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'mac_tb.pattern_in[0:248][9:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'mac_tb.ans[0:9][10:0]' were dumped.
+Warning: [DVDP402] 
+None of the children of the object 'mac_tb.pattern_in[0:248][9:0]' were dumped.
+Chronologic VCS simulator copyright 1991-2021
+Contains Synopsys proprietary information.
+Compiler version S-2021.09-SP1-1_Full64; Runtime version S-2021.09-SP1-1_Full64;  Jan 27 19:11 2025
+VCD+ Writer S-2021.09-SP1-1_Full64 Copyright (c) 1991-2021 by Synopsys Inc.
+The file '/net/marysrock.ece.Virginia.EDU/maryisan/users/hwu6hc/synopsys/workk/inter.vpd' was opened successfully.
+Warning: [DVDL017] 
+Driver time is greater than simulator time.
+Warning: [DVDL017] 
+Driver time is greater than simulator time.
+
+Warning-[STASKW_CO1] Cannot open file
+  The file 'pattern_in.txt' could not be opened. No such file or directory.
+  Please ensure that the file exists with proper permissions.
+
+
+Warning-[STASKW_RMCOF] Cannot open file
+../sourcee/mac_tb.v, 42
+  Cannot open file 'pattern_in.txt' passed as argument to $readmem.
+  Please verify that the first argument to $readmem is a file that exists with
+  proper permissions.
+
+
+Warning-[STASKW_CO1] Cannot open file
+  The file 'out_answer.txt' could not be opened. No such file or directory.
+  Please ensure that the file exists with proper permissions.
+
+
+Warning-[STASKW_RMCOF] Cannot open file
+../sourcee/mac_tb.v, 43
+  Cannot open file 'out_answer.txt' passed as argument to $readmem.
+  Please verify that the first argument to $readmem is a file that exists with
+  proper permissions.
+
+-----------   Oops! Something wrong with your code!   ------------
+$finish called from file "../sourcee/mac_tb.v", line 115.
+$finish at simulation time              2550000
+Simulation complete, time is 2550000 ps.

@@ -1,0 +1,5 @@
+
+# do not use -R option to avoid relaunch of GUI after next compilation
+vcs ../source/johnson_test.v  ../source/johnson.v -gui -debug_all
+./simv
+

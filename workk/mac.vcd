@@ -1,0 +1,83 @@
+$date
+	Mon Jan 27 19:13:46 2025
+$end
+
+$version
+	Synopsys VCS version S-2021.09-SP1-1_Full64
+$end
+
+$timescale
+	1ps
+$end
+
+$comment Csum: 1 059802a6f5ddf26c $end
+
+
+$scope module mac_tb $end
+$var reg 4 ! in_a [3:0] $end
+$var reg 4 " in_b [3:0] $end
+$var reg 1 # in_valid_a $end
+$var reg 1 $ in_valid_b $end
+$var reg 1 % clk $end
+$var reg 1 & reset $end
+$var reg 4 ' count [3:0] $end
+$var wire 11 ( mac_out [10:0] $end
+$var wire 1 ) out_valid $end
+$var integer 32 * i $end
+$var integer 32 + err $end
+$var integer 32 , check $end
+
+$scope module u_mac $end
+$var wire 4 - in_a [3:0] $end
+$var wire 4 . in_b [3:0] $end
+$var wire 1 / in_valid_a $end
+$var wire 1 0 in_valid_b $end
+$var wire 1 1 clk $end
+$var wire 1 2 reset $end
+$var reg 11 3 mac_out [10:0] $end
+$var reg 1 4 out_valid $end
+$var reg 1 5 out_sig $end
+$var reg 4 6 counter [3:0] $end
+$var reg 2 7 state_Next [1:0] $end
+$var reg 2 8 state [1:0] $end
+$var reg 4 9 reg_a [3:0] $end
+$var reg 4 : reg_b [3:0] $end
+$var reg 11 ; reg_c [10:0] $end
+$var reg 11 < temp_out [10:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0%
+x#
+x$
+x5
+x)
+x&
+x/
+x0
+x4
+x2
+b00000000000000000000000000000000 ,
+b0000 '
+bxxxx 6
+b00000000000000000000000000000000 +
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx *
+bxxxx !
+bxxxx "
+bxxxxxxxxxxx (
+bxxxx 9
+bxxxx :
+bxxxxxxxxxxx ;
+bxx 8
+bxx 7
+bxxxxxxxxxxx <
+bxxxx -
+bxxxx .
+bxxxxxxxxxxx 3
+01
+$end
